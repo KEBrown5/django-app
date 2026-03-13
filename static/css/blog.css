@@ -1,0 +1,243 @@
+/* ── VARIABLES ── */
+:root {
+    --ink: #1a1a18;
+    --paper: #f5f2eb;
+    --cream: #ede9df;
+    --accent: #c0392b;
+    --accent-soft: #e8d5d2;
+    --muted: #8a8680;
+    --rule: #d4cfc5;
+}
+
+/* ── BASE ── */
+body {
+    background-color: var(--paper);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 27px,
+        rgba(180,170,155,0.18) 27px,
+        rgba(180,170,155,0.18) 28px
+    );
+}
+
+/* ── NAVBAR ── */
+.site-nav { 
+    border-bottom: 1.5px solid var(--rule); 
+    background: var(--paper); 
+}
+
+.nav-brand { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.3rem; 
+    color: var(--ink) !important; 
+}
+
+.nav-link  { 
+    font-size: 0.78rem; 
+    font-weight: 500; 
+    letter-spacing: 0.1em; 
+    text-transform: uppercase; 
+    color: var(--muted) !important; 
+}
+
+.nav-link:hover, .nav-link.active { 
+    color: var(--ink) !important; 
+}
+
+/* ── PAGE HEADER ── */
+.page-title { 
+    font-family: 'Playfair Display', serif; 
+    font-size: clamp(1.8rem, 4vw, 2.6rem); 
+    font-weight: 700; 
+    color: var(--ink); 
+}
+
+/* ── FOOTER ── */
+.page-footer { 
+    font-size: 0.72rem; 
+    letter-spacing: 0.08em; 
+    text-transform: uppercase; 
+    color: var(--muted); 
+}
+
+/* ── ACCOUNT PAGE ── */
+.account-card { 
+    border: 1.5px solid var(--rule) !important; 
+    border-radius: 3px !important; 
+    animation: fadeUp 0.5s ease both; 
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.account-identity  { 
+    background-color: var(--ink); 
+}
+
+.identity-label    { 
+    font-size: 0.68rem; 
+    letter-spacing: 0.14em; 
+    text-transform: uppercase; 
+    color: var(--muted); 
+}
+
+.identity-username { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.4rem; 
+    color: var(--paper); 
+    font-weight: 700; 
+}
+
+.avatar {
+    width: 58px; height: 58px; border-radius: 50%;
+    background: var(--accent);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+}
+
+.action-btn {
+    border: 1.5px solid var(--rule) !important;
+    border-radius: 3px !important;
+    background: var(--paper);
+    color: var(--ink) !important;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+.action-btn:hover { 
+    border-color: var(--ink) !important; 
+    background: var(--cream); transform: 
+    translateY(-2px); 
+}
+
+.action-btn .btn-icon { 
+    width: 34px; 
+    height: 34px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 1rem; 
+    flex-shrink: 0; 
+}
+
+.action-btn.edit   .btn-icon { 
+    background: #dceeff;
+ }
+
+.action-btn.pwd    .btn-icon { 
+    background: #e8f5e9; 
+}
+
+.action-btn.logout .btn-icon { 
+    background: var(--accent-soft);
+ }
+
+.action-btn.logout { 
+    border-color: var(--accent-soft) !important;
+    color: var(--accent) !important; 
+}
+
+.action-btn.logout:hover { 
+    border-color: var(--accent) !important; 
+    background: var(--accent-soft); 
+}
+
+.btn-sublabel { 
+    font-size: 0.72rem; 
+    color: var(--muted); 
+    font-weight: 400; 
+}
+
+/* This is the description field */
+.custom-textarea {
+    width: 100%;
+    padding: 3px;
+}
+
+/* This is the name field */
+.custom-input {
+    width: 35%;
+    padding: 3px;
+}
+
+/* This is the image field */
+.custom-file-label {
+    background-color: var(--seashell);
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* I'm creating my own image button so I can style it */
+.custom-file-input {
+    display: none;
+}
+
+.upload-form button {
+    margin-top: 10px;
+    padding: 5px;
+    text-transform: uppercase;
+    background-color: var(--seashell);
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.upload-form button:hover {
+    background-color: #F5EBE4;
+}
+
+.custom-file-label:hover {
+    background-color: #F5EBE4;
+}
+
+.edit-card {
+    max-width: 360px;
+    margin: 0 auto 100px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); 
+}
+
+.edit-card input {
+    background: #e7e4e4;
+    width: 100%;
+    border: 0;
+    margin: 0 0 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.edit-card button {
+    text-transform: uppercase;
+    background: #262725;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.edit-card button:hover,.edit-form button:active,.edit-form button:focus {
+    background: #3d3d3d;
+}
+
+.edit-card-title {
+    font-family: 'Playfair Display', serif;
+    background-color: var(--ink);
+}
+
+
+
+
+
+
