@@ -1,1 +1,1 @@
-web: python create_superuser.py && gunicorn blogsite.wsgi
+web: gunicorn blogsite.wsgi:application
